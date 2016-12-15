@@ -1,0 +1,64 @@
+body{
+	background-color: #88292F;
+}
+
+.container{
+	margin-top: 150px;
+}
+
+img{
+	max-width: 100%;
+	border-radius: 5%;
+}
+
+.mg-tile{
+	height: 249px;
+	width: 176px;
+	/* border: 2px solid black; */
+	perspective: 500px;
+	margin: 5px;
+	border-radius: 5%;
+}
+
+
+.mg-tile-inner{
+	width: 176px;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all 1s;
+	border-radius: 10%;
+}
+
+/* one element, both classes */
+/* .mg-front.mg-back */
+/* one element, inside another element
+.mg-front .mg-back */
+/* two completely separate elements */
+.mg-front, .mg-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* border: 2px solid red; */
+	backface-visibility: hidden;
+}
+
+.mg-front{
+	transform: rotateY(180deg);
+	width: 176px;
+	height: 249px;
+}
+
+.mg-back{
+	background: url("deck.png") no-repeat 50% 50%;
+	width: 176px;
+	height: 249px;
+}
+
+.flip, .matched{
+	transform: rotateY(180deg) /* rotateX(360deg) */
+}
+
+.matched{
+	transform: rotateY(1980deg);
+	transition: all 2s;
+}
