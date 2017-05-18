@@ -11,8 +11,7 @@ var cards = [
 // All code will wait until the DOM is ready!
 $(document).ready(function(){
 	var gridSize = 12;
-
-	var card = '<img src="https://www.base64-image.de/build/img/mr-base64-482fa1f767.png">';
+	var card = 0;
 
 	var mgHTML = '';
 	for(var i = 0; i < gridSize; i++){
